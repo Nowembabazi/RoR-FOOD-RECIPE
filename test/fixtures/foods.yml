@@ -2,12 +2,18 @@
 
 one:
   name: MyString
-  measurement_unit: MyString
-  price: 1
-  quantity: 1
+  measurement: MyString
+  unit: 9.99
+  price: 9.99
+  quantity: 9.99
+  user: MyString
+  ID: 1
 
 two:
   name: MyString
-  measurement_unit: MyString
-  price: 1
-  quantity: 1
+  measurement: MyString
+  unit: 9.99
+  price: 9.99
+  quantity: 9.99
+  user: MyString
+  ID: 1
