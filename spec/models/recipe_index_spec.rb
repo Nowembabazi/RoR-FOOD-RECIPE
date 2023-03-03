@@ -3,10 +3,10 @@ require 'rails_helper'
 RSpec.describe 'Recipe Index Page', type: :feature do
   before(:each) do
     visit user_session_path
-    @user1 = User.create!(name: 'Nick', email: 'olaoye@gmail.com', password: 'password', confirmed_at: Time.now)
+    @user1 = User.create!(name: 'John Doe', email: 'john@gmail.com', password: 'john123', confirmed_at: Time.now)
 
-    fill_in 'Email', with: 'olaoye@gmail.com'
-    fill_in 'Password', with: 'password'
+    fill_in 'Email', with: 'john@gmail.com'
+    fill_in 'Password', with: 'john123'
     click_button 'Log in'
 
     @recipe1 = @user1.recipes.create!(

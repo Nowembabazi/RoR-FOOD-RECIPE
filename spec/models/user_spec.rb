@@ -3,7 +3,7 @@ require 'rails_helper'
 RSpec.describe User, type: :model do
   # pending "add some examples to (or delete) #{__FILE__}"
   subject do
-    User.new(name: 'microverse', email: 'microverse23@gmail.com',
+    User.new(name: 'Nick', email: 'olaoye@gmail.com',
              password: 'password')
   end
 
