@@ -12,7 +12,6 @@ class FoodsController < ApplicationController
 
   def create
     add_food = current_user.foods.new(food_params)
-    puts add_food
     if add_food.save
       redirect_to '/foods', notice: 'Food was successfully added.'
     else
