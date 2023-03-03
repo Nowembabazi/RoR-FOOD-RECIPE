@@ -1,20 +1,21 @@
 class Recipe < ApplicationRecord
-  attr_accessor :public
+  belongs_to :user
+  has_many :recipe_foods, dependent: :delete_all
+  has_many :foods, through: :recipe_foods
 
-  before_save :set_public
-
-  belongs_to :user, foreign_key: :user_id
-  has_many :recipe_foods, dependent: :destroy
-
-  # Validations
   validates :name, presence: true
-  validates :description, presence: true
-  validates :public, presence: true
+  validates :preparation_time, presence: true, numericality: { greater_than_or_equal_to: 0 }
+  validates :cooking_time, presence: true, numericality: { greater_than_or_equal_to: 0 }
 
-  # Set public recipe attributes
-  private
+  def list_all_public_recipes
+    public_recipes.order('created_at ASC')
+  end
 
-  def set_public
-    self.public ||= false
+  def total_food_items
+    foods.size
+  end
+
+  def total_price
+    foods.sum('price')
   end
 end
