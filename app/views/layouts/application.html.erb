@@ -15,11 +15,17 @@
   </head>
 
   <body>
-    <%= render partial: "partials/navbar" %>
-    <p class="notice"><%= notice %></p>
+   <%= render partial: "partials/navbar" %>
+    <% if notice.present? %>
+      <p class="notice"><%= notice %></p>
+  <% end %>
+  <% if alert.present? %>
     <p class="alert"><%= alert %></p>
+  <% end %>
+
     <section class="container">
       <%= yield %>
     </section>
+  
   </body>
 </html>
