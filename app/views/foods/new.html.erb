@@ -1,9 +1,21 @@
-<h1>New food</h1>
 
-<%= render "form", food: @food %>
-
-<br>
-
-<div>
-  <%= link_to "Back to foods", foods_path %>
-</div>
+  <div class="food-title">
+    <h1>Add to my list...</h1>
+  </div>
+  <%= form_with model: @foods, url:foods_path, scope: :food, method: :post, data: { turbo: false }, class: "form" do |form| %>
+    <div class="input textarea">
+      <%= form.label :name %>
+      <%= form.text_field :name, placeholder:'Food name', class: "form-control" %>
+    </div>
+    <div class="input textarea mt-3">
+      <%= form.label :measurement %>
+      <%= form.text_field :measurement, placeholder:'Measurements in grams or units', class: "form-control" %>
+    </div>
+    <div class="input textarea mt-3">
+      <%= form.label :price %>
+      <%= form.text_field :price, placeholder:'Price in dollars', class: "form-control" %>
+    </div>
+    <div class="submit mt-3">
+      <%= form.submit "submit", class: "signupbtn" %>
+    </div>
+  <% end %>
