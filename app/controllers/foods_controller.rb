@@ -5,6 +5,8 @@ class FoodsController < ApplicationController
 
   def new
     @foods = Food.new
+
+    render :new
   end
 
   def create

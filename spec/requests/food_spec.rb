@@ -18,12 +18,13 @@ RSpec.describe 'Foods', type: :request do
 
   describe 'GET /new' do
     before do
-      sign_in user
-      get new_food_path
+      get new_food_path(food)
     end
 
-    it 'response to html' do
-      expect(response.content_type).to include 'text/html'
+    it 'response with html' do
+      get "/foods/new"
+      expect(response).to have_http_status(302)
+      expect(response.content_type).to include "text/html"
     end
   end
 end
