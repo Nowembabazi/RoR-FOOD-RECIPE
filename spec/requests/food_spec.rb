@@ -22,9 +22,9 @@ RSpec.describe 'Foods', type: :request do
     end
 
     it 'response with html' do
-      get "/foods/new"
+      get '/foods/new'
       expect(response).to have_http_status(302)
-      expect(response.content_type).to include "text/html"
+      expect(response.content_type).to include 'text/html'
     end
   end
 end
