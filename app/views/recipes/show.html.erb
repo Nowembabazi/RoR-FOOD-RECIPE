@@ -28,6 +28,7 @@
   <table class="table table-striped table-bordered">
     <thead>
       <tr>
+        <th scope="col">No</th>
         <th scope="col">Food</th>
         <th scope="col">Quantity</th>
         <th scope="col">Value</th>
@@ -35,11 +36,12 @@
       </tr>
     </thead>
     <tbody>
-      <% @recipe_foods.each do |recipe_food| %>
+      <% @recipe_foods.each_with_index do |recipe_food, index| %>
         <tr>
-          <td><%= recipe_food.food.name%></td>
-          <td><%= recipe_food.food.quantity%></td>
-          <td> $ <%= recipe_food.food.price %></td>
+          <td><%= index+1%></th>
+          <td><%= recipe_food.food.try(:name)%></td>
+          <td><%= recipe_food.quantity%></td>
+          <td> $ <%= recipe_food.food.try(:price) %></td>
           <th scope="col">
             <%= button_to 'Remove', recipe_recipe_food_path(@recipe.id, recipe_food.id), method: :delete %>
           </th>

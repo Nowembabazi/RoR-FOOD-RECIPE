@@ -11,7 +11,10 @@ class RecipesController < ApplicationController
     @recipe_foods = @recipes.recipe_foods
   end
 
-  def new; end
+  def new
+    @user = current_user
+    @recipe = Recipe.new
+  end
 
   def create
     add_recipe = current_user.recipes.new(recipe_params)
