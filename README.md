@@ -60,7 +60,7 @@ RoR FOOD RECIPES is a Ruby on Rails application that keeps track of all your foo
 
 ### Key Features <a name="key-features"></a>
 
-> Describe between 1-3 key features of the application.
+There are few striking features of this project, namely:
 
 - Create, show or delete a food
 - Create, display or delete a food recipe
@@ -122,7 +122,7 @@ To run tests, run the following command:
 
 ```sh
   gem install rspec
-  rspec spec
+  bundle exec rspec
 ```
 
 <!--
@@ -144,19 +144,17 @@ Example:
 
 ## 👥 Authors <a name="authors"></a>
 
-> Mention all of the collaborators of this project.
-
-👤 **Author1**
+👤 **Nickson Nowembabazi**
 
 - GitHub: [@nowembabazi](https://github.com/Nowembabazi)
 - Twitter: [@nowembabazin](https://twitter.com/NowembabaziN)
 - LinkedIn: [LinkedIn](https://linkedin.com/in/nowembabazi-nickson)
 
-👤 **Author2**
+👤 **Oluwatoyin Olaoye**
 
-- GitHub: [](https://github.com/100)
-- Twitter: [@](https://twitter.com/NICK)
-- LinkedIn: [](https://www.linkedin.com/in/BLA/)
+- GitHub: [@AbayomiOlaoye](https://github.com/abayomiolaoye)
+- Twitter: [@Oluwatoyin](https://twitter.com/olaoyeelijah)
+- LinkedIn: [Oluwatoyin Olaoye](https://www.linkedin.com/in/oluwatoyinolaoye/)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -164,7 +162,7 @@ Example:
 
 ## 🔭 Future Features <a name="future-features"></a>
 
-> Describe 1 - 3 features you will add to the project.
+We hope to implement these in the future in order to further boost interaction and increase use cases:
 
 - [ ] A better User Interface
 - [ ] The inventory functionality
@@ -186,9 +184,7 @@ Feel free to check the [issues page](../../issues/).
 
 ## ⭐️ Show your support <a name="support"></a>
 
-> Write a message to encourage readers to support your project
-
-If you like this project, please give it a star.
+If you like this project, please give it a ⭐️.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -196,7 +192,6 @@ If you like this project, please give it a star.
 
 ## 🙏 Acknowledgments <a name="acknowledgements"></a>
 
-> Give credit to everyone who inspired your codebase.
 
 I would like to thank Microverse for their continued support. They've provided us with the reading material that have helped us to create this application.
 
@@ -206,8 +201,7 @@ I would like to thank Microverse for their continued support. They've provided u
 
 ## ❓ FAQ (OPTIONAL) <a name="faq"></a>
 
-> Add at least 2 questions new developers would ask when they decide to use your project.
-
+These are some of the queries we get when showing the project to people, just in case you would like to know:
 - **Can I reuse this code?**
 
   - Yes sure, feel free.
@@ -222,7 +216,7 @@ I would like to thank Microverse for their continued support. They've provided u
 
 ## 📝 License <a name="license"></a>
 
-This project is [MIT](./LICENSE) licensed.
+This project is [MIT](./LICENSE.md) licensed.
 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>

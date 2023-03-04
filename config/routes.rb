@@ -1,14 +1,22 @@
 Rails.application.routes.draw do
-  devise_for :users
-  resources :users, only: %i[index]
-  resources :foods, only: %i[index new create destroy]
-
-  resources :recipes, only: %i[index new show create destroy] do
-    resources :recipe_foods, only: %i[new create show destroy]
+  resources :foods, only: [:index, :new, :create, :show, :destroy] 
+  resources :recipes, only: [:index, :new, :create, :show, :destroy] do
+    resources :recipe_foods, only: [:new, :create, :destroy]
+    resources :shopping_lists, only: [:index]
   end
-  resources :recipe_foods, only: %i[new new create destroy]
-  resources :public_recipes, only: %i[index]
-  resources :general_shopping_lists, only: %i[index]
 
-  root to: 'users#index'
+  resources :shopping_lists, only: [:index]
+
+  get 'public_recipes', to: 'recipes#public_recipes'
+
+  devise_for :users, controllers: {
+    sessions: 'users/sessions',
+    registrations: 'users/registrations',
+    passwords: 'users/passwords'
+  }
+
+  root to: 'foods#index'
+  
+  resources :users, only: [:index, :show]
+  resources :recipes, only: [:index, :show, :create, :edit, :delete]  
 end
