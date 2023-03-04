@@ -1,0 +1,44 @@
+<%= form_with url: foods_path, html: { class: "container shadow p-5" } do |form| %>
+  <h3 class="mb-3">Add New Food</h3>
+  <div class="row mb-3">
+    <div class="col-12 col-md-3">
+      <%= form.label :name, class: "form-label" %>
+    </div>
+    <div class="col-12 col-md-9">
+      <%= form.text_field :name, class: "form-control" %>
+    </div>
+  </div>
+
+  <div class="row mb-3">
+    <div class="col-12 col-md-3">
+      <%= form.label :measurement, class: "form-label" %>
+    </div>
+    <div class="col-12 col-md-9">
+      <%= form.text_field :measurement, class: "form-control" %>
+    </div>
+  </div>
+
+  <div class="row mb-3">
+    <div class="col-12 col-md-3">
+      <%= form.label :unit_price, class: "form-label" %>
+    </div>
+    <div class="col-12 col-md-9">
+      <%= form.text_field :unit_price, class: "form-control" %>
+    </div>
+  </div>
+
+  <div class="row mb-3">
+    <div class="col-12 col-md-3">
+      <%= form.label :quantity, class: "form-label" %>
+    </div>
+    <div class="col-12 col-md-9">
+      <%= form.text_field :quantity, class: "form-control" %>
+    </div>
+  </div>
+
+  <div class="row mb-3">
+    <div class="col-12">
+      <%= form.submit "Add Food", class: "btn btn-outline-dark float-end" %>
+    </div>
+  </div>
+<% end %>
